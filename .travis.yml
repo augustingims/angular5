@@ -5,6 +5,13 @@ language: node_js
 node_js:
   - "10"
 
+addons:
+  apt:
+    sources:
+      - google-chrome
+    packages:
+      - google-chrome-stable
+
 cache:
   directories:
      - ./node_modules
@@ -13,7 +20,5 @@ install:
   - npm install
 
 script:
-  - export CHROME_BIN=chromium-browser
   - npm run webdriver-update-ci
-  - npm run test -- --watch=false --progress=false --browsers=ChromeNoSandbox
-  - npm run e2e -- --protractor-config=./e2e/protractor.conf.js
+  - npm run test -- --watch=false --progress=false --browsers=ChromeHeadlessCI
