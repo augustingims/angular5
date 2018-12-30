@@ -15,5 +15,5 @@ install:
 script:
   - export CHROME_BIN=chromium-browser
   - npm run webdriver-update-ci
-  - npm run test -- --single-run --no-progress --browser=ChromeNoSandbox
+  - npm run test -- --watch=false --progress=false --browsers=ChromeNoSandbox
   - npm run e2e -- --protractor-config=./e2e/protractor.conf.js
