@@ -23,4 +23,4 @@ script:
   - export CHROME_BIN=chromium-browser
   - npm run webdriver-update-ci
   - npm run test -- --watch=false --progress=false --browsers=ChromeHeadlessCI
-  - npm run e2e -- --no-progress --protractor-config=./e2e/protractor.conf.js
+  - npm run e2e -- --protractor-config=./e2e/protractor.conf.js
