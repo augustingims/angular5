@@ -9,7 +9,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "precommit": "npm run lint",
-    "commitlint": "commitlint -E GIT_PARAMS"
+    "commitlint": "commitlint -E GIT_PARAMS",
+    "webdriver-update-ci": "webdriver-manager update --standalone false --gecko false --versions.chrome 2.37"
   },
   "private": true,
   "dependencies": {
